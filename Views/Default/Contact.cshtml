@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<br />
+<h3>Lütfen Bizimle İletişime Geçin</h3>
+<hr />
+<br />
+@model TravelTripProje.Models.Siniflar.Iletisim
+<div class="row">
+    @*<div class="col-md-2 col-md-offset-2">
+            sd
+        </div>*@
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-6">
+        @using (Html.BeginForm("Contact", "Default", FormMethod.Post))
+        {
+            @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control", @placeholder = "Ad Soyad" })
+            <br />
+            @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @placeholder = "Mail" })
+            <br />
+            @Html.TextBoxFor(x => x.Konu, new { @class = "form-control", @placeholder = "Konu" })
+            <br />
+            @Html.TextBoxFor(x => x.Mesaj, new { @class = "form-control", @placeholder = "Mesaj" })
+            <br />
+            <button class="btn btn-primary">Mesajı Gönder</button>
+        }
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+        Bu projeyi Mayıs 2020 tarihinde başlatıp Haziran 2020 tarihinde ana sayfa düzenlemelerine getirdik. Gezip gördüğüm yerleri sizlerle paylaşmak için kodlamasını tammaen kendim yaptığım mvc5 üzerine kurulu dinamik bir web projesi geliştirdik.Hem türkiyeden hem yurt dışından gezip gördüğüm yerleri blog yazıları olarak sizlerle paylaşma niyetindeyim.
+
+        <hr />
+        TravelTrip © 2020 Ersin Kırkaya
+    </div>
+
+</div>
+<br />
